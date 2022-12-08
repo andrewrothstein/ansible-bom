@@ -1,0 +1,19 @@
+---
+# defaults file for bom
+bom_ver: 0.4.1
+bom_mirror: https://github.com/kubernetes-sigs/bom/releases/download
+bom_arch_map:
+  aarch64: arm64
+  amd64: amd64
+  x86_64: amd64
+bom_install_dir: /usr/local/bin
+bom_checksums:
+  '0.4.1':
+    # https://github.com/kubernetes-sigs/bom/releases/download/v0.4.1/bom-darwin-amd64
+    darwin-amd64: sha256:da0ac74d5094db3262ec84525f48eca5a17eb00e4c28c00fc36d3dbbc5505079
+    # https://github.com/kubernetes-sigs/bom/releases/download/v0.4.1/bom-darwin-arm64
+    darwin-arm64: sha256:e23e383148e6c033d2139251172a499047396da1764f87308344cd95d185a905
+    # https://github.com/kubernetes-sigs/bom/releases/download/v0.4.1/bom-linux-amd64
+    linux-amd64: sha256:6fd784ae788563841af82ce594b5443f86ff1a33a12ebb305782834355bcf891
+    # https://github.com/kubernetes-sigs/bom/releases/download/v0.4.1/bom-linux-arm64
+    linux-arm64: sha256:c503ecf0d389a3ac0ace3b5c994897c7f12451bc59775726ef65969f531fe450

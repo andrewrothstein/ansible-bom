@@ -1,0 +1,9 @@
+---
+# vars file for bom
+bom_os: '{{ ansible_system | lower }}'
+bom_arch: '{{ bom_arch_map[ansible_architecture] }}'
+bom_platform: '{{ bom_os }}-{{ bom_arch }}'
+bom_url: '{{ bom_mirror }}/v{{ bom_ver }}/bom-{{ bom_platform }}{{ bom_dotexe | default("") }}'
+bom_checksum: '{{ bom_checksums[bom_ver][bom_platform] }}'
+bom_install_exe: '{{ bom_install_dir }}/bom-{{ bom_ver }}-{{ bom_platform }}{{ bom_dotexe | default("") }}'
+bom_install_link: '{{ bom_install_dir }}/bom'
