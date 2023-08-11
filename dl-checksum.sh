@@ -9,8 +9,8 @@ dl()
     local os=$2
     local arch=$3
     local dotexe=${4:-}
-    local platform="${os}-${arch}"
-    # https://github.com/kubernetes-sigs/bom/releases/download/v0.4.1/bom-linux-amd64
+    local platform="${arch}-${os}"
+    # https://github.com/kubernetes-sigs/bom/releases/download/v0.5.1/bom-arm64-linux
     local url=$MIRROR/v$ver/bom-${platform}${dotexe}
     local lfile=$DIR/bom-${ver}-${platform}${dotexe}
 
@@ -32,4 +32,4 @@ dlver () {
     dl $ver linux arm64
 }
 
-dlver ${1:-0.4.1}
+dlver ${1:-0.5.1}
